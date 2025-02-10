@@ -1,32 +1,35 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - FreeTable</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FreeTable.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/FreeTable.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FreeTable</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="#"><img src="~/img/logo.svg" alt="Freetable logo" /></a>
+            </div>
+            <div class="nav-form">
+                <form action="/" method="post" class="form-query">
+                    <div class="form-res">
+                        <input type="text" name="fecha" placeholder="10/02/2024" value="" />
+                        <input type="text" name="hora" placeholder="20:30" value="" />
+                        <input type="text" name="personas" placeholder="2 Personas" value="" />
+                    </div>
+                    <div class="form-rest">
+                        <input type="text" name="rest" placeholder="Restaurante" value="" />
+                        <input type="submit" name="buscar" value="Buscar" />
+                    </div>
+                </form>
+            </div>
+            <div class="nav-btt">
+                <a href="#">Registrarse</a>
+                <a href="#">Iniciar Sesión</a>
             </div>
         </nav>
     </header>
@@ -36,14 +39,31 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - FreeTable - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="foo">
+        <div class="foo-acount">
+            <h3>¿Tines un resturante?</h3>
+            <p>
+                Estamos interesados en ampliar nuestro catálogo. Si eres dueño de un restaurante y quieres 
+                trabajar con nosotros, el primer paso es crear una cuenta de empresa. Què esperas?
+            </p>
+            <a href="#"></a>
+        </div>
+        <div class="foo-social">
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <nav class="nav-social">
+                <a href="#"><img src="~/img/facebook.svg" alt="Alternate Text" /></a>
+                <a href="#"><img src="~/img/instagram.svg" alt="Alternate Text" /></a>
+                <a href="#"><img src="~/img/twiter.svg" alt="Alternate Text" /></a>
+            </nav>
+            <p>
+                Para más información llamar al 624527327 <br />
+                o enviar un correo a freetable.atencion@gmail.com
+            </p>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> *@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
