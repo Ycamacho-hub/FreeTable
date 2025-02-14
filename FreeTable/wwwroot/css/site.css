@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-form {
-    flex: 2;
+    flex: 3;
 }
 
 .nav-logo,
@@ -94,8 +94,9 @@ nav {
     margin: 5px;
 }
 
+
 .form-query > * {
-    display: inline-block;
+    display: inline-flex;
 }
 
 .form-query input {
@@ -103,12 +104,12 @@ nav {
     border: 0;
     padding: 10px;
 }
+
 .form-query input[type="submit"] {
     border-radius: 20px;
     background-color: var(--main-color);
     color: #FFFFFF;
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 
 .form-query input:focus {
@@ -125,6 +126,11 @@ nav {
     border: 1px solid var(--second-color);
     border-radius: 25px 0 0 25px;
     padding: 3px;
+}
+
+.form-rest input,
+.form-res input {
+    flex: 1 1 auto;
 }
 
 .form-query input:first-of-type {
