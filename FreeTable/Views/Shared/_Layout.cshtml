@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - FreeTable</title>
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @await RenderSectionAsync("Css", false);
     @* <link rel="stylesheet" href="~/FreeTable.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
