@@ -6,14 +6,15 @@
     <title>@ViewData["Title"] - FreeTable</title>
     @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="~/favicon.svg">
     @await RenderSectionAsync("Css", false);
     @* <link rel="stylesheet" href="~/FreeTable.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
-    <header>
+    <header class="header-principal">
         <nav class="nav">
             <div class="nav-logo">
-                <a href="#"><img src="~/img/logo.svg" alt="Freetable logo" /></a>
+                <a asp-controller="Restaurante" asp-action="Index" ><img src="~/img/logo.svg" alt="Freetable logo" /></a>
             </div>
             <div class="nav-form">
                 <form action="/" method="post" class="form-query">
@@ -29,13 +30,13 @@
                 </form>
             </div>
             <div class="nav-btt">
-                <a href="#" class="btt-3" >Registrarse</a>
-                <a href="#" class="btt-1" >Iniciar Sesión</a>
+                <a asp-controller="Usuario" asp-action="Cliente" class="btt-3" >Registrarse</a>
+                <a asp-controller="Login" asp-action="Login" class="btt-1" >Iniciar Sesión</a>
             </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 contenido">
             @RenderBody()
         </main>
     </div>

@@ -1,9 +1,13 @@
-﻿
+﻿@section Css {
+    <link rel="stylesheet" href="..\css\RegistroCliente.css"></link>
+}
+
 @{
 }
 
-<form>
-    <h2>Resgistro</h2>
+<h2>Resgistro</h2>
+
+<form class="form-registre-client">
     <input type="text" name="numberphone" value="" placeholder="Número de teléfono" />
     <input type="email" name="email" value="" placeholder="Email" />
     <input type="text" name="names" value="" placeholder="Nobre y apellidos"/>
@@ -16,6 +20,6 @@
 
 <p>
     Si tienes un restaurante y quieres disfrutar de los beneficios que FreeTable tiene para ofreserte.
-    Crea una cuenta como <a asp-controller="" asp-action="">empresa aquí</a>.
+    Crea una cuenta como <a asp-controller="Usuario" asp-action="Restaurante">empresa aquí</a>.
 </p>
 

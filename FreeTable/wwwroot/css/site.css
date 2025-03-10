@@ -1,24 +1,4 @@
-:root {
-    --main-font: sans-serif;
-    --font-size: 16px;
-    --main-color: #DA993E;
-    --second-color: #10375C;
-    --main-modal-color: rgba(247, 222, 30, 0.85);
-    --second-modal-color: rgba(34, 34, 34, 0.85);
-    --container-width: 1200px;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: var(--font-size);
-  font-family: var(--main-font);
-}
-
-*,
-*::after,
-*::before {
-    box-sizing: inherit;
-}
+@import url(initializer.css);
 
 /*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -28,7 +8,7 @@ body {
     margin: 0;
 }
 
-header {
+.header-principal {
     width: 100%;
     height: 120px;
 }
@@ -165,8 +145,4 @@ footer,
 .mh-auto {
     margin-left: auto;
     margin-right: auto;
-}
-
-.nav-social {
-    
 }
